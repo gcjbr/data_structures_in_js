@@ -1,0 +1,17 @@
+{
+  "name": "data_structures_in_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "linked_lists.js",
+  "scripts": {
+    "test": "nodemon --watch . --exec 'mocha  || true'"
+
+
+  },
+  "author": "Gustavo Caetano",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.4"
+  }
+}
