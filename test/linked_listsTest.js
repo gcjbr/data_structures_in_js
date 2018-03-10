@@ -138,6 +138,25 @@ describe("removeFromHead()", function() {
     expect(list.tail).to.be.equal(null);
   });
 
-
 });
 
+
+describe("removeFromTail()", function() {
+  const list = new LinkedList();
+  list.addToHead("test 1");
+  list.addToHead("test 2");
+  list.addToHead("test 3");
+  list.addToHead("test 4");
+
+  it("should remove element from tail", function() {
+    list.removeFromTail();
+    expect(list.tail.data).to.be.equal("test 2");
+  });
+
+  it("should return false if there's no tail", function() {
+    const list = new LinkedList();
+    expect(list.removeFromTail()).to.be.equal(false);
+  });
+  
+
+});

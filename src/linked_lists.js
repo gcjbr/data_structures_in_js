@@ -114,6 +114,21 @@ const LinkedList = class LinkedList {
     }
   }
 
+  removeFromTail() {
+    let current = this.head;
+
+    if (this.tail === null) {
+      return false;
+    } 
+
+
+    while (current.next != this.tail) {
+      current = current.next;
+    }
+    current.next = null;
+    this.tail = current;
+
+  }
 
 }
 
