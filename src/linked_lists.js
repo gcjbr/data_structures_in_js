@@ -102,6 +102,18 @@ const LinkedList = class LinkedList {
     return current.data;
   }
 
+  removeFromHead() {
+    if (this.head === null) {
+      return false;
+    }    
+    if (this.head === this.tail) {
+      this.head = null;
+      this.tail = null;
+    } else {
+      this.head = this.head.next;
+    }
+  }
+
 
 }
 

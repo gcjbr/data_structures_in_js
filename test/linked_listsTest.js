@@ -110,6 +110,34 @@ describe("getByIndex()", function() {
     expect(list.getByIndex(-3)).to.be.equal(false);
   });
 
+});
+
+
+describe("removeFromHead()", function() {
+  const list = new LinkedList();
+  list.addToHead("test 1");
+  list.addToHead("test 2");
+  list.addToHead("test 3");
+  list.addToHead("test 4");
+
+  it("should remove element from head", function() {
+    const prevHead = list.head;
+    list.removeFromHead();
+    expect(list.head).to.not.be.equal(prevHead);
+  });
+
+ it("should return false if there's no head", function() {
+  const list = new LinkedList();
+   expect(list.removeFromHead()).to.be.equal(false);
+ });
+
+  it("should should also set tail to null of head was the only node on list", function() {
+    const list = new LinkedList();
+    list.addToHead('test');
+    list.removeFromHead();
+    expect(list.tail).to.be.equal(null);
+  });
+
 
 });
 
